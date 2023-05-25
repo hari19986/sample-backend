@@ -31,13 +31,9 @@ const defaultItems = [
   { name: "<--- To delete items" },
 ];
 
-let port = process.env.PORT;
+const port = 5000;
 
-if (port === null || port === "" || port === undefined) {
-  port = 3000;
-}
-
-app.listen(port, function () {
+app.listen(process.env.PORT || port, function () {
   console.log("I am listening");
 });
 
